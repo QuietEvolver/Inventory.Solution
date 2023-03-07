@@ -35,5 +35,17 @@ namespace Inventory.Controllers
     }
 
     public ActionResult Edit(int id)
+    {
+      Category thisCategory= _db.Categories
+                                  .Include(thisCategory => thisCategory.Items)
+                                  .FirstOrDefault(thisCategory => thisCategory.CategoryID == id);
+      return View(thisCategory);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      Category thisCategory = _db.Categories.FirstOrDefault(thisCategory => thisCategory.CategoryId == id);
+      return View(thisCategory);
+    }
   }
 }
