@@ -1,4 +1,4 @@
-using Microsoft.EntityFramweorkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +37,7 @@ namespace InventoryPreparedness.Controllers
     public ActionResult Details(int id)
     {
       Category thisCategory= _db.Categories
-                                  .Include(category => category.Items)
+                                  .Include(category => category.Inventories)
                                   .FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }
@@ -66,9 +66,9 @@ namespace InventoryPreparedness.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
-      _db.Categories.Remote(thisCategory);
+      _db.Categories.Remove(thisCategory);
       _db.SaveChanges();
-      return ReDirectToAction("Index");
+      return RedirectToAction("Index");
     }
   }
 }

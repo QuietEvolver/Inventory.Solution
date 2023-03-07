@@ -6,6 +6,6 @@ namespace InventoryPreparedness.Models
   {
     public int CategoryId { get; set; }
     public string Name { get; set; }
-    public List<Inventory> Inventorys { get; set; }
+    public List<Inventory> Inventories { get; set; }
   }
 }

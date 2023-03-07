@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using InventoryPreparedness.Models;
+
+<h1>Inventories</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No inventories have been added yet</h3>
+} 
+else
+{
+  <ul>
+    @foreach (Inventory inventory in Model)
+    {
+      <li>@Html.ActionLink($"{inventory.Description}", "Details", new { id = inventory.InventoryId }) | @inventory.Category.Name</li>
+    }
+  </ul>
+}
+
+<p>@Html.ActionLink("Add new inventory", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

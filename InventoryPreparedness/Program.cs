@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using InventoryPreparedness.Models;
 
-namespace Inventory
+namespace InventoryPreparedness
 {
   class Program
   {
