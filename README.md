@@ -50,7 +50,7 @@ Follow the instructions in the LearnHowToProgram.com lesson ["Creating a Test Da
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_ef_core;uid=root;pwd=epicodus;"
+      "DefaultConnection": "Server=localhost;Port=3306;database=inventory_preparedness_with_ef_core;uid=root;pwd=epicodus;"
   }
 }
 ```
