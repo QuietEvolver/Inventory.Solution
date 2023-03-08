@@ -7,11 +7,11 @@ using System.Linq;
 
 namespace InventoryPreparedness.Controllers
 {
-  public class InventoriesPreparednessController : Controller
+  public class InventoriesController : Controller
   {
     private readonly InventoryPreparednessContext _db;
 
-    public InventoriesPreparednessController(InventoryPreparednessContext db)
+    public InventoriesController(InventoryPreparednessContext db)
     {
       _db = db;
     }
