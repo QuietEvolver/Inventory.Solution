@@ -18,9 +18,8 @@ namespace InventoryPreparedness.Controllers
 
     public ActionResult Index()
     {
-      List<Inventory> model = _db.Inventories
-                            .Include(inventory => inventory.Category)
-                            .ToList();
+      List<Inventory> model = _db.Inventories.Include(inventory => inventory.Category).ToList();
+      // put all on one line
       return View(model);
     }
 
