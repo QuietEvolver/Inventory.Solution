@@ -19,7 +19,9 @@ namespace InventoryPreparedness.Controllers
     public ActionResult Index()
     {
       List<Inventory> model = _db.Inventories.Include(inventory => inventory.Category).ToList();
-      // put all on one line
+      // put all on one line: no diff
+      // adding ViewBag: testing to see if verbiage bleeds onto other htmls in _Layout
+      ViewBag.PageTitle = "Stay Prepped! View All";
       return View(model);
     }
 
