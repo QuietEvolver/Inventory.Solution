@@ -31,7 +31,7 @@ Let users choose what properties to search by. For instance, this could be type 
 Continue on to tonight's homework and add update and delete functionality to your application.
 
 ## Database Architecture
-
+  <!-- ![alt text](Isolated.png "Title") -->
 ![alt](InventoryPreparedness/wwwroot/img/readme_sql.png "readme_sql")
 
 ## How To Run This Project
